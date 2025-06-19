@@ -1,29 +1,19 @@
 // src/components/Navbar.jsx
-import React from 'react';
-import { Link } from 'react-router-dom';
-
 export default function Navbar() {
-  const linkStyle = { marginRight: 16 };
-
-  // helper to avoid repeating the object syntax
-  const hashLink = (hash, label) => (
-    <Link
-      key={hash}
-      to={{ pathname: '/', hash }}   // → "/#section"
-      style={linkStyle}
-    >
+  const link = (href, label) => (
+    <a key={href} href={href} className="mr-4">
       {label}
-    </Link>
+    </a>
   );
 
   return (
-    <nav style={{ padding: '1rem', background: '#eee' }}>
-      {hashLink('#home',     'Home')}
-      {hashLink('#about',    'About')}
-      {hashLink('#projects', 'Projects')}
-      {hashLink('#skills',   'Skills')}
-      {hashLink('#resume',   'Resume')}
-      {hashLink('#contact',  'Contact')}
+    <nav className="p-4 bg-gray-100 text-blue-600">
+      {link("#home",     "Home")}
+      {link("#about",    "About")}
+      {link("#projects", "Projects")}
+      {link("#skills",   "Skills")}
+      {link("#resume",   "Resume")}
+      {link("#contact",  "Contact")}
     </nav>
   );
 }
