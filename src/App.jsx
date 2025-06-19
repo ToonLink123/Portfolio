@@ -7,7 +7,7 @@ import Projects from "./pages/Projects";
 import Skills   from "./pages/Skills";
 import Resume   from "./pages/Resume";
 import Contact  from "./pages/Contact";
-// import Navbar   from "./components/Navbar";
+// import Navbar   from "./components/Navbar";   // ← add back when needed
 
 export default function App() {
   return (
