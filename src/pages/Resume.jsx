@@ -1,15 +1,13 @@
 // src/pages/Resume.jsx
 export default function Resume() {
-  // works as "/" during local dev and "/Portfolio/" in production
-  const pdfPath = `${import.meta.env.BASE_URL}Eshan_Agarwal_Resume.pdf`;
+  // "/" in dev, "/Portfolio/" in production
+  const pdfPath = `${import.meta.env.BASE_URL}resume.pdf`;
 
   return (
     <section className="py-16 bg-white text-gray-800">
       <div className="max-w-4xl mx-auto px-6 text-center">
         <h2 className="text-4xl font-bold mb-4">My Resume</h2>
-        <p className="text-lg mb-6">
-          View or download my resume below.
-        </p>
+        <p className="text-lg mb-6">View or download my resume below.</p>
 
         {/* Download button */}
         <a
