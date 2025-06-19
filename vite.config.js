@@ -3,16 +3,18 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  base: '/Portfolio/',
+  base: './',
   plugins: [react()],
   build: {
     rollupOptions: {
       output: {
+        // stable filenames (no hash)
         entryFileNames: 'assets/[name].js',
         chunkFileNames: 'assets/[name].js',
         assetFileNames: ({ name }) => {
-          if (name && name.endsWith('.css')) return 'assets/[name][extname]';
-          return 'assets/[name][extname]';
+          return name && name.endsWith('.css')
+            ? 'assets/[name][extname]'
+            : 'assets/[name][extname]';
         },
       },
     },
