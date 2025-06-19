@@ -1,5 +1,5 @@
 // src/App.jsx
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import ScrollIntoView from "./ScrollIntoView";
 import Home     from "./pages/Home";
 import About    from "./pages/About";
@@ -7,13 +7,13 @@ import Projects from "./pages/Projects";
 import Skills   from "./pages/Skills";
 import Resume   from "./pages/Resume";
 import Contact  from "./pages/Contact";
-// import Navbar   from "./components/Navbar";   // ← add back when needed
+// import Navbar   from "./components/Navbar";   // re-enable when ready
 
 export default function App() {
   return (
-    <BrowserRouter basename="/Portfolio">
+    <>
       <ScrollIntoView />
-      {/* <Navbar /> */}                         {/* ← add back when needed */}
+      {/* <Navbar /> */}
       <Routes>
         <Route path="/"          element={<Home />} />
         <Route path="/about"     element={<About />} />
@@ -24,6 +24,6 @@ export default function App() {
         {/* fallback to home */}
         <Route path="*" element={<Home />} />
       </Routes>
-    </BrowserRouter>
+    </>
   );
 }
