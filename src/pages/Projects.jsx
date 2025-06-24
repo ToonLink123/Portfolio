@@ -12,6 +12,13 @@ const tagColors = {
 
 const projects = [
   {
+    title: 'FreeTax',
+    description:
+      'Fixed bugs from IRS Direct File. Ran with Docker. Ran with WSL.',
+    tags: ['Software Engineering'],
+    date: '2025-06-24'
+  },
+  {
     title: 'Cush',
     description:
       'Engineered robust job control and process management by handling asynchronous signals (e.g., SIGCHLD, SIGINT, SIGTSTP). Implemented built-in commands (jobs, fg, bg, kill, stop, exit) and managed process groups for effective foreground/background execution. Addressed race conditions by strategically blocking/unblocking signals during critical operations to maintain terminal state integrity.',
